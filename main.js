@@ -48,7 +48,7 @@ if(e.shiftKey==true && keypress=="80")
     console.log("p and shift oressed together");
     block_image_width= block_image_width + 10;
     block_image_height= block_image_height + 10;
-    document.getElementById("current_whidth").innerHTML=block_image_width;
+    document.getElementById("current_width").innerHTML=block_image_width;
     document.getElementById("current_heigth").innerHTML=block_image_height;
 }
 
@@ -141,3 +141,73 @@ if(e.shiftKey && keypress =='77')
     }
 }
 }
+
+ function up()
+ {
+ if (playery >=0)
+
+ {
+   playery=playery-block_image_height;
+  console.log("block image height="+ block_image_height);
+  console.log("When Up arrow key is pressed,X=" +playerx ,"Y=" +playery);
+  canvas.remove(playerobject);
+  playerupdate();
+
+ }
+
+ }
+}
+
+
+function down()
+ {
+ if (playery <=500)
+
+ {
+   playery=playery+block_image_height;
+  console.log("block image height="+ block_image_height);
+  console.log("When Down arrow key is pressed,X=" +playerx ,"Y=" +playery);
+  canvas.remove(playerobject);
+  playerupdate();
+
+ }
+
+ }
+
+
+ function left()
+ {
+ if (playery >=0)
+
+ {
+   playerx=playerx-block_image_width;
+  console.log("block image width="+ block_image_width);
+  console.log("When Left  arrow key is pressed,X=" +playerx ,"Y=" +playery);
+  canvas.remove(playerobject);
+  playerupdate();
+
+ }
+
+ }
+
+
+ function right()
+ {
+ if (playery <=850)
+
+ {
+   playerx=playerx-block_image_width;
+  console.log("block image width="+ block_image_width);
+  console.log("When Right arrow key is pressed,X=" +playerx ,"Y=" +playery);
+  canvas.remove(playerobject);
+  playerupdate();
+
+ }
+
+ }
+
+
+
+
+
+
